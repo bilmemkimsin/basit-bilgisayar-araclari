@@ -1,0 +1,30 @@
+<Window x:Class="BasitBilgisayarAraclari.App.ShutdownExitDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:BasitBilgisayarAraclari.App.Localization"
+        Title="{loc:Loc Source='Zamanlayıcı çalışıyor'}"
+        Width="680"
+        SizeToContent="Height"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        FontFamily="Segoe UI"
+        ShowInTaskbar="False">
+    <Border Margin="20" Padding="24" Background="{DynamicResource SurfaceBrush}" CornerRadius="18">
+        <StackPanel>
+            <TextBlock Text="{loc:Loc Source='Windows kapatma sayacı etkin.'}"
+                       Foreground="{DynamicResource TextPrimaryBrush}" FontSize="20" FontWeight="Bold" />
+            <TextBlock Text="{loc:Loc Source='Uygulamadan çıkarken zamanlayıcıyı sürdür, iptal et veya uygulamada kal.'}"
+                       Foreground="{DynamicResource TextMutedBrush}" FontSize="14" TextWrapping="Wrap"
+                       LineHeight="21" Margin="0,10,0,22" />
+            <WrapPanel HorizontalAlignment="Right">
+                <Button Content="{loc:Loc Source='Sürdür ve çık'}" IsDefault="True"
+                        Padding="14,9" Margin="0,0,8,0" Click="Continue_Click" />
+                <Button Content="{loc:Loc Source='İptal et ve çık'}"
+                        Padding="14,9" Margin="0,0,8,0" Click="CancelAndExit_Click" />
+                <Button Content="{loc:Loc Source='Uygulamada kal'}" IsCancel="True"
+                        Padding="14,9" Click="StayOpen_Click" />
+            </WrapPanel>
+        </StackPanel>
+    </Border>
+</Window>

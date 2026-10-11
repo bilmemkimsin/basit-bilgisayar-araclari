@@ -1,0 +1,81 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#F4F6FA" />
+    <SolidColorBrush x:Key="SurfaceBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="SurfaceAltBrush" Color="#FBFCFE" />
+    <SolidColorBrush x:Key="SurfaceRaisedBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="InputBackgroundBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="#20283B" />
+    <SolidColorBrush x:Key="TextSecondaryBrush" Color="#354057" />
+    <SolidColorBrush x:Key="TextMutedBrush" Color="#778198" />
+    <SolidColorBrush x:Key="TextSubtleBrush" Color="#98A0B1" />
+    <SolidColorBrush x:Key="BorderBrush" Color="#E6E9F0" />
+    <SolidColorBrush x:Key="AccentBrush" Color="#5B61D6" />
+    <SolidColorBrush x:Key="AccentSolidBrush" Color="#5B61D6" />
+    <SolidColorBrush x:Key="AccentForegroundBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="AccentSurfaceBrush" Color="#ECEEFF" />
+    <SolidColorBrush x:Key="DisabledSurfaceBrush" Color="#ECEEF3" />
+    <SolidColorBrush x:Key="DisabledBorderBrush" Color="#DDE1EA" />
+    <SolidColorBrush x:Key="DisabledTextBrush" Color="#858DA0" />
+    <SolidColorBrush x:Key="DisabledAccentBrush" Color="#858BCB" />
+    <SolidColorBrush x:Key="SuccessBrush" Color="#38775E" />
+    <SolidColorBrush x:Key="SuccessSurfaceBrush" Color="#EEF7F3" />
+    <SolidColorBrush x:Key="SuccessBorderBrush" Color="#D8EEE4" />
+    <SolidColorBrush x:Key="WarningBrush" Color="#7B4C29" />
+    <SolidColorBrush x:Key="WarningSurfaceBrush" Color="#FFF4E7" />
+    <SolidColorBrush x:Key="ErrorBrush" Color="#B33B43" />
+    <SolidColorBrush x:Key="ErrorSurfaceBrush" Color="#FFF1F2" />
+    <SolidColorBrush x:Key="ErrorBorderBrush" Color="#E8C9CC" />
+    <SolidColorBrush x:Key="ShadowColorBrush" Color="#24304A" />
+    <Color x:Key="ShadowColor">#24304A</Color>
+    <SolidColorBrush x:Key="TearBrush" Color="#42BFF5" />
+    <SolidColorBrush x:Key="InkBrush" Color="#20283B" />
+    <SolidColorBrush x:Key="MutedBrush" Color="#778198" />
+    <SolidColorBrush x:Key="LineBrush" Color="#E6E9F0" />
+
+    <Style TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    </Style>
+    <Style TargetType="ListBox">
+        <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    </Style>
+    <Style TargetType="ListBoxItem">
+        <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    </Style>
+    <Style TargetType="DataGrid">
+        <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+        <Setter Property="RowBackground" Value="{DynamicResource SurfaceBrush}" />
+        <Setter Property="AlternatingRowBackground" Value="{DynamicResource SurfaceAltBrush}" />
+        <Setter Property="HorizontalGridLinesBrush" Value="{DynamicResource BorderBrush}" />
+        <Setter Property="VerticalGridLinesBrush" Value="{DynamicResource BorderBrush}" />
+    </Style>
+    <Style TargetType="DataGridCell">
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{DynamicResource AccentSurfaceBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="DataGridRow">
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+        <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="{DynamicResource AccentSurfaceBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="ToolTip">
+        <Setter Property="Background" Value="{DynamicResource SurfaceRaisedBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    </Style>
+</ResourceDictionary>
